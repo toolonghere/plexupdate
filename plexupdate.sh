@@ -243,7 +243,7 @@ fi
 
 if [ "${AUTOINSTALL}" == "yes" ]; then
 	if [ "${REDHAT}" == "yes" ]; then
-		yum localinstall "${DOWNLOADDIR}/${FILENAME}"
+		yum localinstall "${DOWNLOADDIR}/${FILENAME}" -y
 	else
 		dpkg -i "${DOWNLOADDIR}/${FILENAME}"
 	fi
